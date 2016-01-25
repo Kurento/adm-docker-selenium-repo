@@ -1,0 +1,21 @@
+MAINTAINER Kurento <info@kurento.org>
+
+USER root
+
+#=========
+# Firefox
+#=========
+# http://keyserver.ubuntu.com:11371/pks/lookup?op=get&search=0x9BDB3D89CE49EC21
+RUN wget -q -O - http://keyserver.ubuntu.com:11371/pks/lookup?op=get&search=0x9BDB3D89CE49EC21 | apt-key add - \
+  && echo "deb http://ppa.launchpad.net/mozillateam/firefox-next/ubuntu trusty main" >> /etc/apt/sources.list.d/firefox-beta.list \
+  && apt-get update -qqy \
+  && apt-get -qqy --no-install-recommends install \
+    firefox \
+  && rm -rf /var/lib/apt/lists/*
+
+#========================
+# Selenium Configuration
+#========================
+COPY config.json /opt/selenium/config.json
+
+USER seluser
