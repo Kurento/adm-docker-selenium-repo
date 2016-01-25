@@ -1,4 +1,4 @@
-# Selenium Grid Node - Chrome Debug
+# Selenium Grid Node - Chrome Beta Debug
 
 _This image is only intended for development purposes!_ Runs a Selenium Grid Node with a VNC Server to allow you to visually see the browser being automated. Since it runs additional services to support this it is too heavy weight for usage within a Selenium Grid cluster.
 

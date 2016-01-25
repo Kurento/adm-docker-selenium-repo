@@ -1,6 +1,6 @@
-# Selenium Grid Node - Chrome
+# Selenium Grid Node - Chrome Beta
 
-Selenium Node configured to run Google Chrome.
+Selenium Node configured to run Google Chrome Beta.
 
 ## Dockerfile
 
