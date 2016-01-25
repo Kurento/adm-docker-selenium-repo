@@ -1,5 +1,5 @@
 #!/bin/bash
 VERSION=$1
 
-echo FROM kurento/node-firerox-beta:$VERSION > ./Dockerfile
+echo FROM kurento/node-firefox-beta:$VERSION > ./Dockerfile
 cat ./Dockerfile.txt >> ./Dockerfile
