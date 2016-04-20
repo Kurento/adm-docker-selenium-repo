@@ -1,4 +1,4 @@
-FROM selenium/node-chrome-beta:2.48.2
+FROM kurento/node-chrome-dev:2.47.1
 MAINTAINER Selenium <selenium-developers@googlegroups.com>
 
 USER root

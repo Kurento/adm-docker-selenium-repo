@@ -1,0 +1,5 @@
+image:
+  name: kurento/node-chrome-dev
+  version: 2.47.1
+  extra_tags:
+    - latest

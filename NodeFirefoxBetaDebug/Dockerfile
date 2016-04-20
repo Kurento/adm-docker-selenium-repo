@@ -1,4 +1,4 @@
-FROM kurento/node-chrome-beta:2.47.1
+FROM kurento/node-firefox-beta:2.47.1
 MAINTAINER Selenium <selenium-developers@googlegroups.com>
 
 USER root
