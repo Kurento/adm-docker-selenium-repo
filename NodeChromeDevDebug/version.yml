@@ -1,5 +1,5 @@
 image:
   name: kurento/node-chrome-dev-debug
-  version: 2.47.1-rc1
+  version: 2.53.0-rc1
   extra_tags:
     - latest
