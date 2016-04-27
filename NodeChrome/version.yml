@@ -1,5 +1,6 @@
 image:
   name: kurento/node-chrome
-  version: 2.47.1
+  version: 2.47.1-rc1
+  parent_version: 2.47.1
   extra_tags:
     - latest
