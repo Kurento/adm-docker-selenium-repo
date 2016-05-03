@@ -1,6 +1,6 @@
 image:
   name: kurento/node-chrome-dev
-  version: 2.53.0-rc1
+  version: 2.53.0
   parent_version: 2.53.0
   extra_tags:
     - latest
