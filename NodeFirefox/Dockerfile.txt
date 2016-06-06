@@ -5,11 +5,8 @@ USER root
 #=========
 # Firefox
 #=========
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys AF316E81A155146718A6FBD7A6DCF7707EBC211F  \
-  && echo "deb http://ppa.launchpad.net/ubuntu-mozilla-security/ppa/ubuntu xenial main" >> /etc/apt/sources.list.d/firefox-beta.list \
-  && apt-get update -qqy \
-  && apt-get -qqy --no-install-recommends install \
-    firefox \
+RUN apt-get update -qqy \
+  && apt-get -qqy --no-install-recommends install firefox \
   && rm -rf /var/lib/apt/lists/*
 
 #========================
