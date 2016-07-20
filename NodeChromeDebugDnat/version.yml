@@ -2,3 +2,5 @@ image:
   name: kurento/node-chrome-debug
   version: 2.53.0-dnat
   parent_version: 2.53.0
+  extra_tags:
+    - latest-dnat
