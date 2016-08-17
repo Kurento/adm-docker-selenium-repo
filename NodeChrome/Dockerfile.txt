@@ -2,9 +2,6 @@ MAINTAINER Selenium <selenium-developers@googlegroups.com>
 
 USER root
 
-RUN apt-get update -qqy \
-  && apt-get upgrade -qqy
-
 #===============
 # Google Chrome
 #===============
