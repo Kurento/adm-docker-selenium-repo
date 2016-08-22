@@ -1,6 +1,6 @@
 image:
   name: kurento/node-firefox
-  version: 2.53.0
-  parent_version: 2.53.0
+  version: 2.53.1-rc1
+  parent_version: 2.53.1-rc1
   extra_tags:
-    - latest
+    - latest-dev
