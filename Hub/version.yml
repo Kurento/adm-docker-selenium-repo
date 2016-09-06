@@ -1,6 +1,6 @@
 image:
   name: selenium/hub
-  version: 2.53.1-rc1
-  parent_version: 2.53.1-rc1
+  version: 3.0.0-beta3
+  parent_version: 3.0.0-beta3
   extra_tags:
     - latest-dev
