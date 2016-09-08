@@ -16,7 +16,7 @@ docker logs -f $HUB &
 sleep 2
 
 echo 'Starting Selenium Chrome node...'
-NODE=$(docker run -d --link $HUB_NAME:hub $BROWSER_IMAGE:$BROWSER_VERSION)
+NODE=$(docker run -d --link $HUB_NAME:hub -e 'JAVA_OPTS=-Dwebdriver.gecko.driver=/usr/bin/geckodriver' $BROWSER_IMAGE:$BROWSER_VERSION)
 docker logs -f $NODE &
 echo 'Waiting for node to register and come online...'
 sleep 2

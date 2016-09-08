@@ -11,6 +11,14 @@ module.exports = function(browserName) {
     port: process.env.HUB_PORT_4444_TCP_PORT
   });
 
+  var desired = {browserName: browserName};
+  if(browserName === "firefox") {
+    desired = {
+      browserName: browserName,
+      marionette: true
+    };
+  }
+
   // optional extra logging
   browser.on('status', function(info) {
     console.log(logPrefix + info.cyan);
@@ -22,9 +30,7 @@ module.exports = function(browserName) {
     console.log(logPrefix + ' > ' + meth.magenta, path, (data || '').grey);
   });
 
-  browser.init({
-    browserName: browserName
-  }, function() {
+  browser.init(desired, function() {
     browser.get("https://www.wikipedia.org/", function() {
       browser.title(function(err, title) {
         if (err) {

@@ -6,8 +6,25 @@ USER root
 # Firefox
 #=========
 RUN apt-get update -qqy \
-  && apt-get -qqy --no-install-recommends install firefox \
+  && apt-get -qqy --no-install-recommends install \
+    firefox \
+    gzip \
+    tar \
   && rm -rf /var/lib/apt/lists/*
+
+#============
+# Marionette
+#============
+ENV MARIONETTE_VERSION=0.10.0
+RUN wget --no-verbose -O /tmp/geckodriver.tar.gz https://github.com/mozilla/geckodriver/releases/download/v$MARIONETTE_VERSION/geckodriver-v$MARIONETTE_VERSION-linux64.tar.gz \
+  && rm -rf /opt/selenium/geckodriver \
+  && mkdir -p /opt/selenium/geckodriver \
+  && cd /tmp \
+  && tar -xvzf /tmp/geckodriver.tar.gz \
+  && mv /tmp/geckodriver /opt/selenium/geckodriver/geckodriver \
+  && chmod 755 /opt/selenium/geckodriver/geckodriver \
+  && ln -fs /opt/selenium/geckodriver/geckodriver /usr/bin/geckodriver
+ENV webdriver.gecko.driver=/usr/bin/geckodriver
 
 #========================
 # Selenium Configuration
