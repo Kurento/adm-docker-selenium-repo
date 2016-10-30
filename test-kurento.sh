@@ -3,13 +3,14 @@
 [ -n "$BROWSER_IMAGE" ] || exit 1
 [ -n "$BROWSER_NAME" ] || exit 1
 [ -n "$HUB_VERSION" ] || exit 1
+[ -n "$HUB_IMAGE" ] || HUB_IMAGE=selenium/hub
 [ -n "$BROWSER_VERSION" ] || exit 1
 
 echo 'Building test container image'
 docker build -t selenium/test:local ./Test
 
 echo 'Starting Selenium Hub Container...'
-HUB=$(docker run -d selenium/hub:$HUB_VERSION)
+HUB=$(docker run -d $HUB_IMAGE:$HUB_VERSION)
 HUB_NAME=$(docker inspect -f '{{ .Name  }}' $HUB | sed s:/::)
 echo 'Waiting for Hub to come online...'
 docker logs -f $HUB &
