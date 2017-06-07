@@ -1,6 +1,6 @@
 image:
   name: kurento/node-chrome-beta-debug
-  version: 2.53.1-rc1-dnat
-  parent_version: 2.53.1-rc1
+  version: 2.53.1-dnat
+  parent_version: 2.53.1
   extra_tags:
     - latest-dev-dnat
