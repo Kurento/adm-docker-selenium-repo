@@ -1,7 +1,7 @@
 #!/bin/bash
 VERSION=$1
 
-echo FROM selenium/node-base:$VERSION > ./Dockerfile
+echo FROM kurento/selenium-node-base:$VERSION > ./Dockerfile
 cat ../NodeChrome/Dockerfile.txt >> ./Dockerfile
 sed -i 's/google-chrome-stable/google-chrome-beta/' ./Dockerfile
 sed -i 's|COPY chrome_launcher.sh /opt/google/chrome/google-chrome|COPY chrome_launcher.sh /opt/google/chrome-beta/google-chrome|' ./Dockerfile
