@@ -1,5 +1,5 @@
 image:
-  name: selenium/base
+  name: kurento/selenium-base
   version: 2.53.1
   extra_tags:
     - latest-dev
